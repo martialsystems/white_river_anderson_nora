@@ -1,0 +1,110 @@
+{
+  "stage": "0",
+  "fixture": true,
+  "question": "Does lagged USGS Q at Anderson beat yesterday's Q at Nora?",
+  "tau_star": 2,
+  "lag_curve": [
+    {
+      "tau_days": 0,
+      "corr_train": 0.8676763470715392
+    },
+    {
+      "tau_days": 1,
+      "corr_train": 0.9228923722039409
+    },
+    {
+      "tau_days": 2,
+      "corr_train": 0.9865793078681383
+    },
+    {
+      "tau_days": 3,
+      "corr_train": 0.9233966470437056
+    },
+    {
+      "tau_days": 4,
+      "corr_train": 0.868698387248882
+    },
+    {
+      "tau_days": 5,
+      "corr_train": 0.8286840410941833
+    },
+    {
+      "tau_days": 6,
+      "corr_train": 0.7983211343091166
+    },
+    {
+      "tau_days": 7,
+      "corr_train": 0.7839522895080949
+    }
+  ],
+  "skill": {
+    "persistence": {
+      "rmse_cfs": 74.2188430971882,
+      "mae_cfs": 46.88268465030089
+    },
+    "anderson_lag": {
+      "rmse_cfs": 27.151819819230884,
+      "mae_cfs": 19.784959499557136,
+      "tau_days": 2,
+      "scale": 1.1544632216799848,
+      "intercept": 6.015585078714878
+    },
+    "nwm_nora_cited": {
+      "rmse_cfs": 1316.13,
+      "source": "fa2e315"
+    }
+  },
+  "verdict": "nwm_left_gage_skill",
+  "indy_in_X": false,
+  "indy_diagnostic": {
+    "tau_days": 1,
+    "corr_train": 0.9849400432026599,
+    "curve": [
+      {
+        "tau_days": 0,
+        "corr_train": 0.896091039585009
+      },
+      {
+        "tau_days": 1,
+        "corr_train": 0.9849400432026599
+      },
+      {
+        "tau_days": 2,
+        "corr_train": 0.8935292229731738
+      },
+      {
+        "tau_days": 3,
+        "corr_train": 0.83799700240591
+      },
+      {
+        "tau_days": 4,
+        "corr_train": 0.8013160598274033
+      },
+      {
+        "tau_days": 5,
+        "corr_train": 0.7716343543611909
+      },
+      {
+        "tau_days": 6,
+        "corr_train": 0.7527996734119664
+      },
+      {
+        "tau_days": 7,
+        "corr_train": 0.7360494777376942
+      }
+    ],
+    "role": "diagnostic"
+  },
+  "predictor_sites": [
+    "03348000"
+  ],
+  "nwm_nora_rmse_cfs_cited": 1316.13,
+  "nwm_citation": "fa2e315",
+  "p_sfha_feature": false,
+  "figures": [
+    "hydrograph.png",
+    "lag_corr.png"
+  ],
+  "n_days": 1553,
+  "source": "fixture"
+}
