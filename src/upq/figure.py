@@ -29,10 +29,23 @@ def write_hydrograph(dest: Path, *, fit: dict[str, Any], title: str, subtitle: s
     ho = fit["holdout"]
     dates = [datetime.strptime(str(x)[:10], "%Y-%m-%d") for x in ho["dates"]]
     fig, ax = plt.subplots(figsize=(7.2, 4.2))
-    ax.plot(dates, ho["nora_cfs"], color="#222222", lw=1.4, label="Nora Q")
-    ax.plot(dates, ho["persistence_cfs"], color="#7a7a7a", lw=1.0, ls="--", label="Nora persistence")
-    ax.plot(dates, ho["anderson_lag_cfs"], color="#1b6ca8", lw=1.2, label=f"Anderson lag {fit['tau_star']} d")
-    ax.set_ylabel("discharge (cfs)")
+    ax.plot(dates, ho["nora_cfs"], color="#222222", lw=1.4, label="Nora 00060")
+    ax.plot(
+        dates,
+        ho["persistence_cfs"],
+        color="#7a7a7a",
+        lw=1.0,
+        ls="--",
+        label="Nora 00060 lag 1 d",
+    )
+    ax.plot(
+        dates,
+        ho["anderson_lag_cfs"],
+        color="#1b6ca8",
+        lw=1.2,
+        label=f"Anderson 00060 lag {fit['tau_star']} d",
+    )
+    ax.set_ylabel("USGS daily mean 00060 (cfs)")
     ax.set_title(title, fontsize=10)
     ax.legend(loc="upper left", fontsize=7, frameon=False)
     ax.xaxis.set_major_locator(mdates.AutoDateLocator())
@@ -76,14 +89,14 @@ def write_two(log_dir: Path, *, fit: dict[str, Any]) -> list[Path]:
         write_hydrograph(
             log_dir / "hydrograph.png",
             fit=fit,
-            title="Nora holdout: USGS Q, persistence, Anderson lag",
-            subtitle="Discharge in cfs, not feet. Indianapolis is not a predictor.",
+            title="Nora holdout: USGS daily mean 00060",
+            subtitle="Observed Nora 00060, Nora 00060 lag 1 d, Anderson 00060 lag tau*. cfs, not feet.",
         ),
         write_lag_curve(
             log_dir / "lag_corr.png",
             fit=fit,
-            title="Train corr(Anderson Q lagged, Nora Q)",
-            subtitle="Travel time between gages, not a wet mask. tau* from train only.",
+            title="Train corr(Anderson 00060 lagged, Nora 00060)",
+            subtitle="Lag in calendar days. tau* from train only. Indianapolis is not in this fit.",
         ),
     ]
     _cap(len(paths))

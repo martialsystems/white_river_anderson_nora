@@ -1,6 +1,6 @@
 # Methodology: lagged Anderson Q versus Nora persistence
 
-Question: Does lagged USGS Q at Anderson beat yesterday's Q at Nora?
+Question: Does lagged USGS daily mean 00060 at Anderson beat lag-1 USGS daily mean 00060 at Nora?
 
 ## Layers
 
@@ -11,9 +11,9 @@ Question: Does lagged USGS Q at Anderson beat yesterday's Q at Nora?
 | Diagnostic | 00060 | NWIS 03353000 Indianapolis. Downstream of Nora. Not a feature. |
 | Split | comparable to NWM error | Train through 2018-09-30, hold out 2018-10-01 to 2020-12-31 |
 
-tau* is argmax of train correlation for lags 0 to 7 days, then frozen. Holdout scores a 1-coefficient scale fit of Anderson Q at that lag. Nora persistence is Q at lag 1. NWM Nora RMSE 1,316 cfs is cited from `fa2e315`, not recomputed.
+tau* is argmax of train correlation for lags 0 to 7 days, then frozen. Holdout scores a 1-coefficient scale fit of Anderson daily mean 00060 at that lag. The local bar is Nora daily mean 00060 from the previous calendar day. NWM Nora RMSE 1,316 cfs is cited from `fa2e315`, not recomputed.
 
-Live: tau* = 1 day. Anderson lag RMSE 971 cfs beats Nora persistence 1,243 and cited NWM 1,316. Verdict: NWM left gage skill on the table. Indianapolis train corr is same-day 0.99 (downstream diagnostic).
+Live: tau* = 1 day. Anderson 00060 lag 1 d RMSE 971 cfs beats Nora 00060 lag 1 d (1,243) and cited NWM (1,316). Indianapolis train corr is same-day 0.99 (downstream diagnostic).
 
 No Stage IV. No NWM zarr download. No 2026 overlay. No feet inversion.
 

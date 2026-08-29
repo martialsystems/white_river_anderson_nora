@@ -5,7 +5,9 @@ from __future__ import annotations
 
 from datetime import date
 
-QUESTION = "Does lagged USGS Q at Anderson beat yesterday's Q at Nora?"
+QUESTION = (
+    "Does lagged USGS daily mean 00060 at Anderson beat lag-1 USGS daily mean 00060 at Nora?"
+)
 ANDERSON_ID = "03348000"
 NORA_ID = "03351000"
 INDY_ID = "03353000"

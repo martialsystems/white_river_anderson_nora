@@ -17,6 +17,8 @@ def test_readme_opens_with_the_question() -> None:
     assert "diagnostic" in text.lower()
     assert "fa2e315" in text
     assert "p_sfha" in text
+    assert "00060" in text
+    assert "yesterday" not in text.lower()
     assert scan_text(text) == []
     assert "—" not in text
     assert "What it is not" not in text

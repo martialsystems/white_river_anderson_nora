@@ -1,6 +1,6 @@
 # Agent notes: white_river_anderson_nora
 
-Public GitHub. MIT. Question: Does lagged USGS Q at Anderson beat yesterday's Q at Nora?
+Public GitHub. MIT. Question: Does lagged USGS daily mean 00060 at Anderson beat lag-1 USGS daily mean 00060 at Nora?
 
 Do not edit NWM error (`fa2e315` / `fbbe1fd`), rain-stage, Nora HAND, FIM, HWM, or map-completion. Do not restamp those figures. Do not download NWM again. Do not use Indianapolis as a Nora predictor. Do not invert Nora Q to feet. Do not open a sixth raster tree.
 
