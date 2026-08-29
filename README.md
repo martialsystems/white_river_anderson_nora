@@ -1,12 +1,12 @@
 # White River Anderson → Nora Q
 
-Does lagged USGS daily mean 00060 at Anderson beat lag-1 USGS daily mean 00060 at Nora?
+Does yesterday at Anderson help you guess Nora's flow today?
 
-Yes. Science lock: `58859be`. This tree earns its repo.
+Most days, yes. Anderson lag 1 d, scaled, is 971 cfs RMSE against yesterday at Nora 1,243 and NWM 1,316 (`fa2e315`, not recomputed). A cheaper gage beat both.
 
-Holdout RMSE on the same 2018-10-01 to 2020-12-31 split: **971** (Anderson 00060 lag 1 d, scaled) vs **1,243** (Nora 00060 lag 1 d) vs **1,316** (NWM v2.1 at Nora, cited from `fa2e315`, not recomputed). A cheaper gage beat both. NWM left gage skill on the table above the stretch where its bias grows.
+So this is not "we timed the wave." Train corr is 0.88 at lag 1 d and 0.87 at lag 0: daily 00060 barely sees travel time. Anderson already has the pulse. Yesterday at Anderson is still what you can use this morning.
 
-Train corr is 0.88 at lag 1 d and 0.87 at lag 0. Daily 00060 barely sees travel time. The win is mostly that Anderson already has the pulse. That does not kill the nowcast: Anderson 00060 from the previous calendar day is still what you can use this morning.
+Science lock: `58859be`.
 
 Indianapolis 03353000 is downstream of Nora: diagnostic only, not a predictor. This tree does not read `p_sfha` and does not paint HAND. NWM-error stays "NWM vs lag-1 00060 at each gage." Do not restamp it.
 
