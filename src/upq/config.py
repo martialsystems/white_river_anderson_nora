@@ -23,6 +23,7 @@ TRAIN_END = date(2018, 9, 30)
 HOLDOUT_START = date(2018, 10, 1)
 NWM_NORA_RMSE_CFS = 1316.13
 NWM_NORA_CITATION = "fa2e315"
+LOCKED_LIVE_COMMIT = "58859be"
 USER_AGENT = "MartialSystemsResearch/white_river_anderson_nora"
 NWIS_DV_URL = (
     "https://waterservices.usgs.gov/nwis/dv/?format=json&sites={site}"
