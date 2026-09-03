@@ -65,14 +65,7 @@ Two figures max. Empty NWIS 00060 stops (`run_live.py` exit 2).
 | `src/upq/` | NWIS 00060, tau*, skill, figures |
 | `upqforge/` | GraphForge pin |
 
-Parent: 
-- [![white_river_nwm_error](https://img.shields.io/badge/white__river__nwm__error-2e7d32?style=for-the-badge)](https://github.com/martialsystems/white_river_nwm_error) (Nora persistence 1,243 / NWM 1,316 cited)
-  
-Next reach:
-- [![white_river_fall_creek_gap](https://img.shields.io/badge/white__river__fall__creek__gap-2e7d32?style=for-the-badge)](https://github.com/martialsystems/white_river_fall_creek_gap)
-  
-Write-up:
-- [![White River Q](https://img.shields.io/badge/White_River_Q-2e7d32?style=for-the-badge)](https://gist.github.com/martialsystems/1104e5e47b8a04006ec694d289d43639)
+[![NWM v2.1 vs yesterday](https://img.shields.io/badge/NWM_v2.1_vs_yesterday-2e7d32?style=for-the-badge)](https://github.com/martialsystems/white_river_nwm_error) (Nora persistence 1,243 / NWM 1,316 cited) [![Fall Creek at Indianapolis](https://img.shields.io/badge/Fall_Creek_at_Indianapolis-2e7d32?style=for-the-badge)](https://github.com/martialsystems/white_river_fall_creek_gap) [![White River Q](https://img.shields.io/badge/White_River_Q-2e7d32?style=for-the-badge)](https://gist.github.com/martialsystems/1104e5e47b8a04006ec694d289d43639)
 
 This tree does not read `p_sfha` and is not a flood map.
 
