@@ -1,7 +1,7 @@
 {
   "stage": "0",
   "fixture": true,
-  "question": "Does lagged USGS daily mean 00060 at Anderson beat lag-1 USGS daily mean 00060 at Nora?",
+  "question": "Does yesterday at Anderson help you guess Nora's flow today?",
   "tau_star": 2,
   "lag_curve": [
     {
